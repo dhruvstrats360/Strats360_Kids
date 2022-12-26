@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		8F391146295966430033DB47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F391145295966430033DB47 /* AppDelegate.swift */; };
 		8F391148295966430033DB47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F391147295966430033DB47 /* SceneDelegate.swift */; };
-		8F39114A295966430033DB47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F391149295966430033DB47 /* ViewController.swift */; };
+		8F39114A295966430033DB47 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F391149295966430033DB47 /* LoginViewController.swift */; };
 		8F39114D295966430033DB47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F39114B295966430033DB47 /* Main.storyboard */; };
 		8F39114F295966460033DB47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F39114E295966460033DB47 /* Assets.xcassets */; };
 		8F391152295966460033DB47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F391150295966460033DB47 /* LaunchScreen.storyboard */; };
+		8F39115E295975A50033DB47 /* ImageEditingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F39115D295975A40033DB47 /* ImageEditingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8F391142295966430033DB47 /* Strats360_Kids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strats360_Kids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F391145295966430033DB47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F391147295966430033DB47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8F391149295966430033DB47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8F391149295966430033DB47 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8F39114C295966430033DB47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F39114E295966460033DB47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F391151295966460033DB47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F391153295966460033DB47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F39115D295975A40033DB47 /* ImageEditingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +60,38 @@
 			children = (
 				8F391145295966430033DB47 /* AppDelegate.swift */,
 				8F391147295966430033DB47 /* SceneDelegate.swift */,
-				8F391149295966430033DB47 /* ViewController.swift */,
-				8F39114B295966430033DB47 /* Main.storyboard */,
+				8F39115F295975AF0033DB47 /* Model */,
+				8F39115B295973720033DB47 /* ViewControllers */,
+				8F39115C295973830033DB47 /* View */,
 				8F39114E295966460033DB47 /* Assets.xcassets */,
 				8F391150295966460033DB47 /* LaunchScreen.storyboard */,
 				8F391153295966460033DB47 /* Info.plist */,
 			);
 			path = Strats360_Kids;
+			sourceTree = "<group>";
+		};
+		8F39115B295973720033DB47 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8F391149295966430033DB47 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8F39115C295973830033DB47 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8F39114B295966430033DB47 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8F39115F295975AF0033DB47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F39115D295975A40033DB47 /* ImageEditingModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F39114A295966430033DB47 /* ViewController.swift in Sources */,
+				8F39114A295966430033DB47 /* LoginViewController.swift in Sources */,
 				8F391146295966430033DB47 /* AppDelegate.swift in Sources */,
+				8F39115E295975A50033DB47 /* ImageEditingModel.swift in Sources */,
 				8F391148295966430033DB47 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +323,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +352,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
