@@ -13,14 +13,18 @@ class GenderViewController: UIViewController {
     @IBOutlet weak var maleIconView: UIView!
     @IBOutlet weak var femaleIconView: UIView!
     @IBOutlet weak var pickerUIView: UIView!
+    @IBOutlet weak var agePicker: UIPickerView!
+    @IBOutlet weak var btnNext: UIButton!
     
+    @IBOutlet weak var progressBar: BigProgressView!
+    // Models
+    let btnModel = CustomButton()
     
     // Constants
     
-    var agePickerView = UIPickerView()
     var rotationAngle: CGFloat!
-    let width: CGFloat = 100
-    let height: CGFloat = 100
+    let width: CGFloat = 150
+    let height: CGFloat = 150
     let arrAge = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     var selectedGender = "Male"
     
@@ -33,8 +37,13 @@ class GenderViewController: UIViewController {
         viewBorders(vieW: maleIconView)
         viewBorders(vieW: femaleIconView)
         
+        // button edits
+        btnModel.editbtn1(pressButton: btnNext)
+        
+        // progressBar
+        progressBar.layer.cornerRadius = 8
+        
         self.navigationController?.isNavigationBarHidden = false
-
         
     }
     func viewBorders(vieW: UIView){
@@ -44,18 +53,12 @@ class GenderViewController: UIViewController {
         maleIconView.layer.borderColor = UIColor.red.cgColor
     }
     func agepickerviewtoSuperView(){
-        agePickerView.delegate = self
-        agePickerView.dataSource = self
-        agePickerView.frame = CGRect(x: 130, y: -130, width: pickerUIView.frame.height, height: pickerUIView.frame.width)
-//        agePickerView.center = pickerUIView.center
+        agePicker.delegate = self
+        agePicker.dataSource = self
         rotationAngle = (-90 * (.pi/180))
-        agePickerView.transform = CGAffineTransform(rotationAngle: (rotationAngle))
-        pickerUIView.addSubview(agePickerView)
-        
+        agePicker.transform = CGAffineTransform(rotationAngle: (rotationAngle))
     }
-    
     @IBAction func femaleBtnPressed(_ sender: Any) {
-        
          if maleIconView.layer.borderColor == UIColor.red.cgColor && femaleIconView.layer.borderColor == UIColor.white.cgColor{
              femaleIconView.layer.borderColor =  UIColor.red.cgColor
              maleIconView.layer.borderColor = UIColor.white.cgColor
@@ -68,6 +71,11 @@ class GenderViewController: UIViewController {
             femaleIconView.layer.borderColor = UIColor.white.cgColor
             selectedGender = "Male"
        }
+    }
+    @IBAction func nextBtnPressed(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let secondVC = sb.instantiateViewController(identifier: "CreateProfileViewController")
+               self.navigationController?.pushViewController(secondVC, animated: true)
     }
 }
 //MARK: UIPickerViewDelegate, UIPickerViewDataSource
@@ -96,11 +104,9 @@ extension GenderViewController: UIPickerViewDelegate, UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let view = UIView()
         view.frame = CGRect(x: 0, y: 0, width: width, height: height)
-        
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: height))
-        
         label.text = "\(arrAge[row])"
-        label.font = UIFont.systemFont(ofSize: 30)
+        label.font = UIFont.systemFont(ofSize: 50)
         label.textAlignment = .center
         view.addSubview(label)
         // till now picker was rotated, not the view.
@@ -109,10 +115,8 @@ extension GenderViewController: UIPickerViewDelegate, UIPickerViewDataSource{
         view.transform = CGAffineTransform(rotationAngle: ((90 * (.pi/180))))
         return view
     }
-    
 }
-class BigProgressView: UIProgressView {
-    override func sizeThatFits(_ size: CGSize) -> CGSize {
-        return CGSize(width: size.width, height: 20)
-    }
-}
+
+//MARK: toDo List
+// 1. Make pickerView selected view dynamic
+// 2.

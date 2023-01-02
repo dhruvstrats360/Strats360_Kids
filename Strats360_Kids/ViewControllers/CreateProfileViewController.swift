@@ -21,21 +21,23 @@ class CreateProfileViewController: UIViewController {
     let arrSubLabels = ["Subject Name"]
     var index = 0
     
+    // Models
+    let BtnModel = CustomButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         taskSelectorColView.delegate = self
         taskSelectorColView.dataSource = self
         
         // Do any additional setup after loading the view.
-        editbtn(btn: btnNext)
+        // model to eddit btn
+        BtnModel.editbtn1(pressButton: btnNext)
     }
-    // btn edits
-    func editbtn(btn: UIButton){
-        btn.layer.shadowColor = UIColor.black.cgColor
-        btn.layer.shadowPath = CGPath(rect: CGRect(x: 5, y: 35, width: 290, height: 10), transform: .none)
-        btn.layer.shadowRadius = 5
-        btn.layer.shadowOpacity = 2
-        btn.layer.cornerRadius = 10
+    
+    @IBAction func nextBtnPressed(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let secondVC = sb.instantiateViewController(identifier: "SetTimerViewController")
+               self.navigationController?.pushViewController(secondVC, animated: true)
     }
 }
 extension CreateProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -47,7 +49,7 @@ extension CreateProfileViewController: UICollectionViewDelegate, UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SubjectSelectCell", for: indexPath) as! SubjectSelectCell
         cell.imgSubject.image = arrSubImages[0]
         cell.lblSubjectName.text = arrSubLabels[0]
-//        cell.contentView.layer.borderColor = UIColor.lightGray.cgColor
+
         cell.contentView.layer.borderWidth = 3
         cell.contentView.layer.cornerRadius = 15
         

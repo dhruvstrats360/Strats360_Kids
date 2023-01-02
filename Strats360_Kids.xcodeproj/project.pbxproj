@@ -18,6 +18,7 @@
 		8F3911672959C30E0033DB47 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3911662959C30E0033DB47 /* GenderViewController.swift */; };
 		8FBBF81D295DC1C1009186CF /* SignUpNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBBF81C295DC1C1009186CF /* SignUpNavController.swift */; };
 		8FBBF81F295EACB5009186CF /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBBF81E295EACB5009186CF /* CreateProfileViewController.swift */; };
+		8FBE00D92962BE8D00C19331 /* SetTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE00D82962BE8D00C19331 /* SetTimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		8F3911662959C30E0033DB47 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 		8FBBF81C295DC1C1009186CF /* SignUpNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNavController.swift; sourceTree = "<group>"; };
 		8FBBF81E295EACB5009186CF /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
+		8FBE00D82962BE8D00C19331 /* SetTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimerViewController.swift; sourceTree = "<group>"; };
 		AEABA0BD79D204386FAF80B2 /* Pods-Strats360_Kids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Strats360_Kids.release.xcconfig"; path = "Target Support Files/Pods-Strats360_Kids/Pods-Strats360_Kids.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 				8F391149295966430033DB47 /* LoginViewController.swift */,
 				8F3911662959C30E0033DB47 /* GenderViewController.swift */,
 				8FBBF81E295EACB5009186CF /* CreateProfileViewController.swift */,
+				8FBE00D82962BE8D00C19331 /* SetTimerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				8F39114A295966430033DB47 /* LoginViewController.swift in Sources */,
 				8FBBF81D295DC1C1009186CF /* SignUpNavController.swift in Sources */,
 				8F3911672959C30E0033DB47 /* GenderViewController.swift in Sources */,
+				8FBE00D92962BE8D00C19331 /* SetTimerViewController.swift in Sources */,
 				8F391146295966430033DB47 /* AppDelegate.swift in Sources */,
 				8F39115E295975A50033DB47 /* ImageEditingModel.swift in Sources */,
 				8F391148295966430033DB47 /* SceneDelegate.swift in Sources */,
