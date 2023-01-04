@@ -1,20 +1,16 @@
 PODS:
   - IQKeyboardManager (6.5.10)
-  - SwiftyButton (0.8.2)
 
 DEPENDENCIES:
   - IQKeyboardManager
-  - SwiftyButton
 
 SPEC REPOS:
   trunk:
     - IQKeyboardManager
-    - SwiftyButton
 
 SPEC CHECKSUMS:
   IQKeyboardManager: 45a1fa55c1a5b02c61ac0fd7fd5b62bb4ad20d97
-  SwiftyButton: 5b0ef314e9cf61cf8a83e456ddd1ea1f53f30598
 
-PODFILE CHECKSUM: a13a49da08ae796c59913060e0c5054a7617f0d9
+PODFILE CHECKSUM: befdfaaa26531ca6ecee81317afc03ff4f2086a8
 
 COCOAPODS: 1.11.3

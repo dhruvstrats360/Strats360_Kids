@@ -6,6 +6,5 @@ target 'Strats360_Kids' do
   use_frameworks!
 
   # Pods for Strats360_Kids
-	pod 'SwiftyButton'
   pod 'IQKeyboardManager' 
 end

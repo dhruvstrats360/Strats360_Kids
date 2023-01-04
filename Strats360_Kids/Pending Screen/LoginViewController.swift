@@ -25,8 +25,6 @@ class LoginViewController: UIViewController {
         btn360.editbtn1(pressButton: btnSignUp)
         // some edit spl for SignUp btn.
         
-        btnSignUp.layer.borderWidth = 1.6
-        btnSignUp.layer.borderColor = UIColor.red.cgColor
         self.navigationController?.isNavigationBarHidden = true
     }
     override func viewWillAppear(_ animated: Bool) {

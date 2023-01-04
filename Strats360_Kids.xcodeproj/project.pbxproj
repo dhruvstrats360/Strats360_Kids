@@ -16,7 +16,11 @@
 		8F391152295966460033DB47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F391150295966460033DB47 /* LaunchScreen.storyboard */; };
 		8F39115E295975A50033DB47 /* ImageEditingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F39115D295975A40033DB47 /* ImageEditingModel.swift */; };
 		8F3911672959C30E0033DB47 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3911662959C30E0033DB47 /* GenderViewController.swift */; };
-		8FBBF81D295DC1C1009186CF /* SignUpNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBBF81C295DC1C1009186CF /* SignUpNavController.swift */; };
+		8F63450129630CAD00BB3AC4 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F63450029630CAD00BB3AC4 /* HomePageViewController.swift */; };
+		8F63450429630DE000BB3AC4 /* HomePageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F63450329630DE000BB3AC4 /* HomePageCollectionViewCell.swift */; };
+		8F65DA05296546A100099717 /* pendingScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F65DA04296546A100099717 /* pendingScreen.storyboard */; };
+		8F65DA0A29654D9800099717 /* SubjectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F65DA0929654D9800099717 /* SubjectCollectionViewController.swift */; };
+		8F65DA0F2965830E00099717 /* ChapterCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F65DA0E2965830E00099717 /* ChapterCollectionViewController.swift */; };
 		8FBBF81F295EACB5009186CF /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBBF81E295EACB5009186CF /* CreateProfileViewController.swift */; };
 		8FBE00D92962BE8D00C19331 /* SetTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE00D82962BE8D00C19331 /* SetTimerViewController.swift */; };
 /* End PBXBuildFile section */
@@ -34,7 +38,11 @@
 		8F391153295966460033DB47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F39115D295975A40033DB47 /* ImageEditingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditingModel.swift; sourceTree = "<group>"; };
 		8F3911662959C30E0033DB47 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
-		8FBBF81C295DC1C1009186CF /* SignUpNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNavController.swift; sourceTree = "<group>"; };
+		8F63450029630CAD00BB3AC4 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		8F63450329630DE000BB3AC4 /* HomePageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageCollectionViewCell.swift; sourceTree = "<group>"; };
+		8F65DA04296546A100099717 /* pendingScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = pendingScreen.storyboard; sourceTree = "<group>"; };
+		8F65DA0929654D9800099717 /* SubjectCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectCollectionViewController.swift; sourceTree = "<group>"; };
+		8F65DA0E2965830E00099717 /* ChapterCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCollectionViewController.swift; sourceTree = "<group>"; };
 		8FBBF81E295EACB5009186CF /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		8FBE00D82962BE8D00C19331 /* SetTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimerViewController.swift; sourceTree = "<group>"; };
 		AEABA0BD79D204386FAF80B2 /* Pods-Strats360_Kids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Strats360_Kids.release.xcconfig"; path = "Target Support Files/Pods-Strats360_Kids/Pods-Strats360_Kids.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,9 +100,9 @@
 			children = (
 				8F391145295966430033DB47 /* AppDelegate.swift */,
 				8F391147295966430033DB47 /* SceneDelegate.swift */,
+				8F65DA032965466900099717 /* Pending Screen */,
 				8F39115F295975AF0033DB47 /* Model */,
-				8FBBF81B295DC129009186CF /* NavController */,
-				8F39115B295973720033DB47 /* ViewControllers */,
+				8F6344FF29630C8700BB3AC4 /* View Controller  */,
 				8F39115C295973830033DB47 /* View */,
 				8F39114E295966460033DB47 /* Assets.xcassets */,
 				8F391150295966460033DB47 /* LaunchScreen.storyboard */,
@@ -103,15 +111,12 @@
 			path = Strats360_Kids;
 			sourceTree = "<group>";
 		};
-		8F39115B295973720033DB47 /* ViewControllers */ = {
+		8F39115B295973720033DB47 /* SignUpVC */ = {
 			isa = PBXGroup;
 			children = (
-				8F391149295966430033DB47 /* LoginViewController.swift */,
 				8F3911662959C30E0033DB47 /* GenderViewController.swift */,
-				8FBBF81E295EACB5009186CF /* CreateProfileViewController.swift */,
-				8FBE00D82962BE8D00C19331 /* SetTimerViewController.swift */,
 			);
-			path = ViewControllers;
+			path = SignUpVC;
 			sourceTree = "<group>";
 		};
 		8F39115C295973830033DB47 /* View */ = {
@@ -130,12 +135,51 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		8FBBF81B295DC129009186CF /* NavController */ = {
+		8F6344FF29630C8700BB3AC4 /* View Controller  */ = {
 			isa = PBXGroup;
 			children = (
-				8FBBF81C295DC1C1009186CF /* SignUpNavController.swift */,
+				8F39115B295973720033DB47 /* SignUpVC */,
+				8F63450229630CB400BB3AC4 /* HomePageVC */,
+				8F65DA0829654D4500099717 /* SubjectVC */,
+				8F65DA0D2965812900099717 /* ChapterVC */,
 			);
-			path = NavController;
+			path = "View Controller ";
+			sourceTree = "<group>";
+		};
+		8F63450229630CB400BB3AC4 /* HomePageVC */ = {
+			isa = PBXGroup;
+			children = (
+				8F63450029630CAD00BB3AC4 /* HomePageViewController.swift */,
+				8F63450329630DE000BB3AC4 /* HomePageCollectionViewCell.swift */,
+			);
+			path = HomePageVC;
+			sourceTree = "<group>";
+		};
+		8F65DA032965466900099717 /* Pending Screen */ = {
+			isa = PBXGroup;
+			children = (
+				8F391149295966430033DB47 /* LoginViewController.swift */,
+				8FBBF81E295EACB5009186CF /* CreateProfileViewController.swift */,
+				8FBE00D82962BE8D00C19331 /* SetTimerViewController.swift */,
+				8F65DA04296546A100099717 /* pendingScreen.storyboard */,
+			);
+			path = "Pending Screen";
+			sourceTree = "<group>";
+		};
+		8F65DA0829654D4500099717 /* SubjectVC */ = {
+			isa = PBXGroup;
+			children = (
+				8F65DA0929654D9800099717 /* SubjectCollectionViewController.swift */,
+			);
+			path = SubjectVC;
+			sourceTree = "<group>";
+		};
+		8F65DA0D2965812900099717 /* ChapterVC */ = {
+			isa = PBXGroup;
+			children = (
+				8F65DA0E2965830E00099717 /* ChapterCollectionViewController.swift */,
+			);
+			path = ChapterVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F65DA05296546A100099717 /* pendingScreen.storyboard in Resources */,
 				8F391152295966460033DB47 /* LaunchScreen.storyboard in Resources */,
 				8F39114F295966460033DB47 /* Assets.xcassets in Resources */,
 				8F39114D295966430033DB47 /* Main.storyboard in Resources */,
@@ -254,12 +299,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F39114A295966430033DB47 /* LoginViewController.swift in Sources */,
-				8FBBF81D295DC1C1009186CF /* SignUpNavController.swift in Sources */,
+				8F63450129630CAD00BB3AC4 /* HomePageViewController.swift in Sources */,
+				8F65DA0A29654D9800099717 /* SubjectCollectionViewController.swift in Sources */,
 				8F3911672959C30E0033DB47 /* GenderViewController.swift in Sources */,
 				8FBE00D92962BE8D00C19331 /* SetTimerViewController.swift in Sources */,
 				8F391146295966430033DB47 /* AppDelegate.swift in Sources */,
+				8F65DA0F2965830E00099717 /* ChapterCollectionViewController.swift in Sources */,
 				8F39115E295975A50033DB47 /* ImageEditingModel.swift in Sources */,
 				8F391148295966430033DB47 /* SceneDelegate.swift in Sources */,
+				8F63450429630DE000BB3AC4 /* HomePageCollectionViewCell.swift in Sources */,
 				8FBBF81F295EACB5009186CF /* CreateProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

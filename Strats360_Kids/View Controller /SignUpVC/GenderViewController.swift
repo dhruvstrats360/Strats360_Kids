@@ -9,6 +9,7 @@ import UIKit
 
 
 class GenderViewController: UIViewController {
+    
     // Outlets
     @IBOutlet weak var maleIconView: UIView!
     @IBOutlet weak var femaleIconView: UIView!
@@ -16,21 +17,19 @@ class GenderViewController: UIViewController {
     @IBOutlet weak var agePicker: UIPickerView!
     @IBOutlet weak var btnNext: UIButton!
     
-    @IBOutlet weak var progressBar: BigProgressView!
     // Models
     let btnModel = CustomButton()
     
     // Constants
-    
     var rotationAngle: CGFloat!
-    let width: CGFloat = 150
-    let height: CGFloat = 150
+    var width: CGFloat = 150
+    var height: CGFloat = 150
     let arrAge = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     var selectedGender = "Male"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Picker - Add, Customize
+        // Picker - Customize
         agepickerviewtoSuperView()
         
         //icon view
@@ -39,42 +38,45 @@ class GenderViewController: UIViewController {
         
         // button edits
         btnModel.editbtn1(pressButton: btnNext)
+        btnNext.layer.cornerRadius = btnNext.frame.size.width / 2
+        height = view.frame.width * 0.2
+        width = view.frame.height * 0.2
         
-        // progressBar
-        progressBar.layer.cornerRadius = 8
-        
-        self.navigationController?.isNavigationBarHidden = false
+        // nav Controller
+        navigationItem.backButtonTitle = ""
         
     }
     func viewBorders(vieW: UIView){
-        vieW.layer.borderWidth = 3
-        vieW.layer.borderColor = UIColor.white.cgColor
-        vieW.layer.cornerRadius = 50
-        maleIconView.layer.borderColor = UIColor.red.cgColor
+        vieW.layer.borderWidth = 8
+        vieW.layer.borderColor = UIColor.clear.cgColor
+        vieW.layer.cornerRadius = vieW.frame.size.width / 2
+        maleIconView.layer.borderColor = UIColor.black.cgColor
+        
     }
     func agepickerviewtoSuperView(){
         agePicker.delegate = self
         agePicker.dataSource = self
         rotationAngle = (-90 * (.pi/180))
         agePicker.transform = CGAffineTransform(rotationAngle: (rotationAngle))
+        
     }
     @IBAction func femaleBtnPressed(_ sender: Any) {
-         if maleIconView.layer.borderColor == UIColor.red.cgColor && femaleIconView.layer.borderColor == UIColor.white.cgColor{
-             femaleIconView.layer.borderColor =  UIColor.red.cgColor
-             maleIconView.layer.borderColor = UIColor.white.cgColor
+         if maleIconView.layer.borderColor == UIColor.black.cgColor && femaleIconView.layer.borderColor == UIColor.clear.cgColor{
+             femaleIconView.layer.borderColor =  UIColor.black.cgColor
+             maleIconView.layer.borderColor = UIColor.clear.cgColor
              selectedGender = "Female"
         }
     }
     @IBAction func malebtnPressed(_ sender: UIButton) {
-        if femaleIconView.layer.borderColor == UIColor.red.cgColor && maleIconView.layer.borderColor == UIColor.white.cgColor{
-            maleIconView.layer.borderColor =  UIColor.red.cgColor
-            femaleIconView.layer.borderColor = UIColor.white.cgColor
+        if femaleIconView.layer.borderColor == UIColor.black.cgColor && maleIconView.layer.borderColor == UIColor.clear.cgColor{
+            maleIconView.layer.borderColor =  UIColor.black.cgColor
+            femaleIconView.layer.borderColor = UIColor.clear.cgColor
             selectedGender = "Male"
        }
     }
     @IBAction func nextBtnPressed(_ sender: UIButton) {
         let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let secondVC = sb.instantiateViewController(identifier: "CreateProfileViewController")
+        let secondVC = sb.instantiateViewController(identifier: "tabBar")
                self.navigationController?.pushViewController(secondVC, animated: true)
     }
 }
@@ -98,21 +100,24 @@ extension GenderViewController: UIPickerViewDelegate, UIPickerViewDataSource{
         height
     }
     func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
-        width
+        width * 0.1
     }
     // Customizing view that returns data we have selected.
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let view = UIView()
-        view.frame = CGRect(x: 0, y: 0, width: width, height: height)
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: height))
+        view.frame = CGRect(x: 0, y: 0, width: width, height: height )
+        
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: width , height: height))
         label.text = "\(arrAge[row])"
-        label.font = UIFont.systemFont(ofSize: 50)
+        label.inputView?.addBottomBorder(in: .red, width: 10.0)
+        label.font = UIFont(name: "Marker Felt", size: 40)
+        label.textColor = .systemBlue
         label.textAlignment = .center
         view.addSubview(label)
         // till now picker was rotated, not the view.
-        
         // View rotation
         view.transform = CGAffineTransform(rotationAngle: ((90 * (.pi/180))))
+        reloadInputViews()
         return view
     }
 }
